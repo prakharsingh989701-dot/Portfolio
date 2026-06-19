@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Prakhar Singh – Aspiring Full Stack Developer. BCA student passionate about building real-world web applications." />
+  <meta name="keywords" content="Prakhar Singh, Full Stack Developer, BCA, Web Developer, Node.js, JavaScript, Portfolio" />
+  <meta name="author" content="Prakhar Singh" />
+  <meta property="og:title" content="Prakhar Singh | Full Stack Developer" />
+  <meta property="og:description" content="Aspiring Full Stack Developer building real-world web applications." />
+  <meta property="og:type" content="website" />
+  <title>Prakhar Singh | Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">PS</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initializing...</p>
+    </div>
+  </div> 
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Prakhar<span class="logo-accent">Singh</span><span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#achievements" class="nav-link">Goals</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <!-- Animated background particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating shapes -->
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-text" data-reveal>
+        <p class="hero-greeting"><span class="wave">👋</span> Hello, I'm</p>
+        <h1 class="hero-name">Prakhar<br /><span class="hero-name-accent">Singh</span></h1>
+        <div class="hero-title">
+          <span class="typing-prefix">— </span><span id="typed-text"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-tagline">
+          Passionate about building <strong>real-world web applications</strong> and<br class="desktop-only" />
+          continuously learning new technologies.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+          <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contact Me</a>
+          <a href="#" class="btn btn-ghost" title="Coming Soon"><i class="fas fa-file-download"></i> Resume <span class="badge">Soon</span></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Projects</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Technologies</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num" data-target="1">0</span><span class="stat-label">Year Learning</span></div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap" data-reveal-right>
+        <div class="hero-image-ring ring-1"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <div class="hero-image-glow"></div>
+        <div class="hero-image-container">
+          <!-- Stylish SVG placeholder avatar -->
+          <img src="prakhar.jpeg" alt="Prakhar Singh" class="hero-image">
+        </div>
+        <!-- Floating badges -->
+        <div class="float-badge badge-top"><i class="fas fa-code"></i> Full Stack</div>
+        <div class="float-badge badge-bottom"><i class="fab fa-node-js"></i> Node.js</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <a href="#about"><div class="scroll-dot"></div></a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>
+            I am a <strong>BCA student</strong> and an aspiring Full Stack Developer with a strong interest in backend development.
+            I enjoy building projects and continuously learning new technologies to improve my skills.
+          </p>
+          <p>
+            Apart from coding, I like <span class="highlight-pill">🎌 watching anime</span>, <span class="highlight-pill">🎵 listening to music</span>,
+            <span class="highlight-pill">🏐 playing volleyball</span>, and <span class="highlight-pill">💪 working out</span>.
+          </p>
+          <p>
+            I am passionate about creating <strong>real-world applications</strong> and always eager to explore and learn something new.
+          </p>
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Let's Talk</a>
+            <a href="#projects" class="btn btn-outline"><i class="fas fa-folder-open"></i> My Work</a>
+          </div>
+        </div>
+
+        <div class="about-cards" data-reveal-right>
+          <div class="info-card">
+            <div class="info-card-icon">🎓</div>
+            <div class="info-card-text">
+              <h4>BCA Student</h4>
+              <p>Invertis University</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">💻</div>
+            <div class="info-card-text">
+              <h4>Backend Enthusiast</h4>
+              <p>Node.js & Express</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🚀</div>
+            <div class="info-card-text">
+              <h4>Aspiring Full Stack</h4>
+              <p>Dev in progress</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📚</div>
+            <div class="info-card-text">
+              <h4>Continuous Learner</h4>
+              <p>Always growing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">My background</span>
+        <h2 class="section-title">Edu<span class="accent">cation</span></h2>
+      </div>
+
+      <div class="timeline" data-reveal>
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <div class="tl-header">
+              <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="tl-meta">
+                <span class="tl-year">2025 – 2028</span>
+                <span class="tl-status">Currently Enrolled</span>
+                <span class="t1-sem">2nd Semester</span>
+              </div>
+            </div>
+            <h3 class="tl-degree">Bachelor of Computer Applications</h3>
+            <p class="tl-institute"><i class="fas fa-university"></i> Invertis University</p>
+            <p class="tl-desc">
+              Pursuing a comprehensive BCA degree with a focus on programming, web development,
+              database management, and software engineering fundamentals.
+            </p>
+            <div class="tl-tags">
+              <span class="tag">Web Development</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">DBMS</span>
+              <span class="tag">Operating Systems</span>
+            </div>
+            <div class="tl-progress-wrap">
+              <span class="tl-progress-label">Expected Graduation: 2028</span>
+              <div class="tl-progress-bar"><div class="tl-progress-fill" style="width: 10%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">What I work with</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category" data-reveal>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-desktop"></i></div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-html5 skill-icon html"></i>
+                <span>HTML5</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-css3-alt skill-icon css"></i>
+                <span>CSS3</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-js-square skill-icon js"></i>
+                <span>JavaScript</span>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category" data-reveal>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-node-js skill-icon node"></i>
+                <span>Node.js</span>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fas fa-bolt skill-icon express"></i>
+                <span>Express.js</span>
+                <span class="skill-pct">55%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-category" data-reveal>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fas fa-leaf skill-icon mongo"></i>
+                <span>MongoDB</span>
+                <span class="skill-pct">55%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="55"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="skill-category" data-reveal>
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fas fa-copyright skill-icon c-lang"></i>
+                <span>C</span>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <i class="fab fa-python skill-icon python"></i>
+                <span>Python</span>
+                <span class="skill-pct">50%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Tic Tac Toe -->
+        <div class="project-card glass-card" data-reveal>
+          <div class="project-image" style="background: linear-gradient(135deg,#6c63ff,#4ecdc4)">
+            <i class="fas fa-gamepad project-img-icon"></i>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+              <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">01</div>
+            <h3 class="project-title">Tic Tac Toe Game</h3>
+            <p class="project-desc">Interactive browser-based Tic Tac Toe game for two players with smooth gameplay and win detection.</p>
+            <div class="project-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn project-btn-live"><i class="fas fa-globe"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rock Paper Scissors -->
+        <div class="project-card glass-card" data-reveal>
+          <div class="project-image" style="background: linear-gradient(135deg,#f093fb,#f5576c)">
+            <i class="fas fa-hand-rock project-img-icon"></i>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+              <a href="#" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">02</div>
+            <h3 class="project-title">Rock Paper Scissors</h3>
+            <p class="project-desc">Browser-based Rock Paper Scissors game with real-time score updates and animated results.</p>
+            <div class="project-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="project-btn project-btn-live"><i class="fas fa-globe"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Netflix Clone -->
+        <div class="project-card glass-card" data-reveal>
+          <div class="project-image" style="background: linear-gradient(135deg,#e50914,#221f1f)">
+            <i class="fas fa-film project-img-icon"></i>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">03</div>
+            <h3 class="project-title">Netflix Clone</h3>
+            <p class="project-desc">Responsive front-end clone of the Netflix landing page with pixel-perfect layout and styling.</p>
+            <div class="project-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fab fa-github"></i> GitHub</a>
+              <span class="project-btn project-btn-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Amazon Clone -->
+        <div class="project-card glass-card" data-reveal>
+          <div class="project-image" style="background: linear-gradient(135deg,#ff9900,#232f3e)">
+            <i class="fab fa-amazon project-img-icon"></i>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">04</div>
+            <h3 class="project-title">Amazon Clone</h3>
+            <p class="project-desc">Responsive front-end clone of the Amazon homepage with full navigation and product grid layout.</p>
+            <div class="project-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fab fa-github"></i> GitHub</a>
+              <span class="project-btn project-btn-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">My journey</span>
+        <h2 class="section-title">Experi<span class="accent">ence</span></h2>
+      </div>
+
+      <div class="experience-wrap" data-reveal>
+        <div class="exp-card glass-card">
+          <div class="exp-left">
+            <div class="exp-icon"><i class="fas fa-search"></i></div>
+            <span class="exp-type">Seeking</span>
+          </div>
+          <div class="exp-right">
+            <h3>Aspiring Full Stack Developer</h3>
+            <span class="exp-period"><i class="fas fa-calendar-alt"></i> 2025 – Present</span>
+            <p>Currently seeking internship opportunities in <strong>Full Stack Development</strong>. Building real-world projects and continuously improving backend and full stack development skills through hands-on learning.</p>
+            <ul class="exp-list">
+              <li><i class="fas fa-check-circle"></i> Developed multiple browser-based JavaScript games</li>
+              <li><i class="fas fa-check-circle"></i> Built responsive front-end clones of major platforms</li>
+              <li><i class="fas fa-check-circle"></i> Learning backend development with Node.js &amp; Express</li>
+              <li><i class="fas fa-check-circle"></i> Exploring MongoDB for database management</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag">Open to Internships</span>
+              <span class="tag">Remote / On-site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">What I do</span>
+        <h2 class="section-title">My <span class="accent">Services</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-palette"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Crafting clean, responsive, and visually appealing interfaces using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="service-card glass-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend Development</h3>
+          <p>Building robust server-side logic and RESTful APIs using Node.js and Express.js.</p>
+        </div>
+        <div class="service-card glass-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Responsive Design</h3>
+          <p>Designing websites that look and work flawlessly across all devices and screen sizes.</p>
+        </div>
+        <div class="service-card glass-card" data-reveal>
+          <div class="service-icon"><i class="fab fa-js"></i></div>
+          <h3>JS Applications</h3>
+          <p>Developing interactive web applications and games with modern vanilla JavaScript.</p>
+        </div>
+        <div class="service-card glass-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Full Stack Projects</h3>
+          <p>Learning and building end-to-end web applications combining frontend, backend, and databases.</p>
+        </div>
+        <div class="service-card glass-card" data-reveal>
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3>Database Integration</h3>
+          <p>Connecting applications with MongoDB to create dynamic, data-driven web solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS / GOALS SECTION ===== -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">My roadmap</span>
+        <h2 class="section-title">Goals &amp; <span class="accent">Growth</span></h2>
+      </div>
+
+      <div class="goals-grid">
+        <div class="goal-card glass-card" data-reveal>
+          <div class="goal-num">01</div>
+          <div class="goal-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Full Stack Mastery</h3>
+          <p>Learning Full Stack Development from foundations to production-grade applications.</p>
+          <div class="goal-bar"><div class="goal-fill" data-width="55"></div></div>
+        </div>
+        <div class="goal-card glass-card" data-reveal>
+          <div class="goal-num">02</div>
+          <div class="goal-icon"><i class="fas fa-hammer"></i></div>
+          <h3>Building Real Projects</h3>
+          <p>Applying knowledge by building real-world applications that solve actual problems.</p>
+          <div class="goal-bar"><div class="goal-fill" data-width="70"></div></div>
+        </div>
+        <div class="goal-card glass-card" data-reveal>
+          <div class="goal-num">03</div>
+          <div class="goal-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend Excellence</h3>
+          <p>Deepening backend skills — APIs, authentication, databases, and deployment.</p>
+          <div class="goal-bar"><div class="goal-fill" data-width="50"></div></div>
+        </div>
+        <div class="goal-card glass-card" data-reveal>
+          <div class="goal-num">04</div>
+          <div class="goal-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Internship Opportunity</h3>
+          <p>Seeking an internship to gain real industry exposure and professional experience.</p>
+          <div class="goal-bar"><div class="goal-fill" data-width="30"></div></div>
+        </div>
+        <div class="goal-card glass-card" data-reveal>
+          <div class="goal-num">05</div>
+          <div class="goal-icon"><i class="fas fa-compass"></i></div>
+          <h3>Exploring New Tech</h3>
+          <p>Continuously exploring new technologies, frameworks, and modern developer tools.</p>
+          <div class="goal-bar"><div class="goal-fill" data-width="65"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">Let's connect</span>
+        <h2 class="section-title">Get in <span class="accent">Touch</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info" data-reveal>
+          <p class="contact-intro">Have an opportunity or just want to say hi? My inbox is always open.</p>
+
+          <div class="contact-cards">
+            <a href="mailto:p4prakhar142008@gmail.com" class="contact-card glass-card">
+              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-card-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-val">p4prakhar142008@gmail.com</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <a href="https://github.com/prakharsingh989701-dot" target="_blank" rel="noopener" class="contact-card glass-card">
+              <div class="contact-card-icon github-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-card-text">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-val">prakharsingh989701-dot</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/prakhar-singh-a307462a9" target="_blank" rel="noopener" class="contact-card glass-card">
+              <div class="contact-card-icon linkedin-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="contact-card-text">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-val">Prakhar Singh</span>
+              </div>
+              <i class="fas fa-arrow-right contact-arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap glass-card" data-reveal-right>
+          <h3>Send a Message</h3>
+          
+          <form action="/" method="POST">
+
+          <!-- name -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" />
+            </div>
+            <!-- email -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <!-- subject -->
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+          </div>
+          <!-- message -->
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="send-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo"><span class="logo-bracket">&lt;</span>Prakhar<span class="logo-accent">Singh</span><span class="logo-bracket">/&gt;</span></span>
+          <p>Aspiring Full Stack Developer building things for the web.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/prakharsingh989701-dot" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/prakhar-singh-a307462a9" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:p4prakhar142008@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#achievements">Goals</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Prakhar Singh. All Rights Reserved.</p>
+        <p class="footer-made">Designed and Developed with <span class="heart">❤️</span> using HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Main Script --->
+    <script src="script.js"></script> 
+</body>
+</html>
